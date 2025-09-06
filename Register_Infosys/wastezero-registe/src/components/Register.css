@@ -1,0 +1,300 @@
+/* Reset & Base */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Inter', sans-serif; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Page Container */
+.register-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+/* Background Particles */
+#particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.container {
+  border: 3px solid rgb(23, 236, 16) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(119,114,114,0.6);
+}
+
+/* Left Form Section */
+.form-container {
+  flex: 1; 
+  padding: 16px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #2E7D32;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  border-color: #2E7D32;
+  box-shadow: 0 0 4px rgba(46,125,50,0.4);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 8px;
+  background: #2E7D32;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover { background: #134716; }
+
+#message {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #2E7D32;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Email Verify Section */
+.email-verify-group {
+  margin-bottom: 20px;
+}
+
+.email-verify-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;   /* space between input and button */
+  width: 100%;
+}
+
+.email-verify-wrapper input[type="email"] {
+  flex: 1;      /* input takes full available space */
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.verify-btn {
+  width: auto !important;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #2E7D32;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0; /* keep text in one line */
+}
+.verify-btn:hover{
+  background-color: #134716;
+}
+.verify-btn:disabled,
+.verify-btn.verified {
+  background-color: #4caf50;
+  cursor: default;
+}
+
+/* Register button */
+.register-btn {
+  background-color: #19a320;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.register-btn:hover {
+  background-color: #19501b;
+}
+
+/* OTP Popup Overlay */
+.otp-popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;   /* visible */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* OTP Popup Box */
+.otp-popup {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  text-align: center;
+  font-size: 14px;
+}
+
+.otp-popup h4 {
+  margin-bottom: 15px;
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.otp-popup p {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.otp-popup input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 10px 0 15px;
+  text-align: center;
+}
+
+.otp-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.otp-popup .btn-verify {
+  flex: 1;
+  background: #2E7D32;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.otp-popup .btn-verify:hover {
+  background: #134716;
+}
+
+.otp-popup .btn-cancel {
+  flex: 1;
+  background: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.otp-popup .btn-cancel:hover {
+  background: #aaa;
+}
+
+.otp-error-msg {
+  color: #d32f2f;
+  margin-top: 10px;
+}
+
+/* Verify status text */
+.verify-status {
+  color: green;
+  font-weight:lighter;
+  margin-top: 5px;
+}
+
+/* Form message */
+.form-message {
+  margin-top: 10px;
+  color: red;
+  font-weight: 600;
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+.login-link a {
+  color: #2E7D32;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-link a:hover { text-decoration: underline; }
+
+/* Right Panel */
+.right-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #11cf1b, #81d119);
+  color: #fff;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+.right-panel h3 { font-size: 26px; margin-bottom: 8px; }
+.right-panel p { font-size: 14px; line-height: 1.3; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container { flex-direction: column; }
+  .right-panel { display: none; }
+}
